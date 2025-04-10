@@ -1,4 +1,133 @@
-:root {
-  background-color: D9D9D9;
+.container {
+    display: grid;
+    grid-template-areas: 
+        "sidebar content";
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
 }
 
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    grid-template-areas: 
+        "sidebar-icon"
+        "sidebar-directory"
+        "sidebar-history"
+        "sidebar-profile";
+    grid-template-rows: 64px 1fr 1fr 64px;
+    background-color: var(--n-secondary-color);
+}
+
+.content {
+    grid-area: content;
+    background-color: var(--n-main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content p {
+    margin-bottom: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--n-trinary-color);
+}
+
+.chat-form {
+    display: flex;
+    position: relative;
+}
+
+.chat-field {
+    padding: 0 65px 0 20px;
+    width: 800px;
+    height: 56px;
+    background-color: var(--n-secondary-color);
+    border-radius: 28px;
+    color: var(--l-font);
+    font-size: 15px;
+}
+
+.chat-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--n-trinary-color);
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.sidebar-btn {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-area {
+    display: flex;
+    justify-content: end;
+}
+
+.left-area {
+    display: flex;
+    justify-content: start;
+}
+
+.square-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--n-trinary-color);
+    border-radius: 5px;
+}
+
+.right-area .square-btn:nth-child(2) {
+    margin: 0 0 0 16px;
+}
+
+.sidebar-directory {
+    padding: 0 16px;
+    grid-area: sidebar-directory;
+}
+
+.sidebar-history {
+    padding: 0 16px;
+    grid-area: sidebar-history;
+}
+
+.sidebar-directory p, .sidebar-history p {
+    padding: 10px 20px;
+    color: var(--n-fourth-color);
+    font-size: 15px;
+    border: 1px solid var(--n-fourth-color);
+    border-radius: 10px;
+}
+
+.sidebar-profile {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    grid-area: sidebar-profile;
+}
+
+.sidebar-profile p {
+    margin: 0 0 0 15px;
+    color: var(--n-trinary-color);
+}
+
+.circle-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--n-trinary-color);
+}

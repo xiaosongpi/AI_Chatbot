@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Chatting from "./Chatting.jsx";
+import Chatting from "./view/Chatting";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
